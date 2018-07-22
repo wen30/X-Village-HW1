@@ -1,30 +1,42 @@
-import random
+# numpy模組 - 基本用法:創建矩陣
+import numpy as np
 
-from copy import deepcopy
+#建立一個 np array
+#放入list就會轉換
+#印出 3*3 矩陣
+
+#i.
+array_A = np.array([
+                [1,2,3],
+                [4,5,6],
+                [7,8,9]
+])    
+print ('Matrix A (3,3):','\n',array_A)
 
 
-class Matrix:
+array_B = np.array([
+                [9,8,7],
+                [6,5,4],
+                [3,2,1]
+])
+print ('Matrix B (3,3):','\n',array_B)
 
-    def __init__(self, nrows, ncols):
-        """Construct a (nrows X ncols) matrix"""
-        pass
+print('='*10,'A+B','='*10)
 
-    def add(self, m):
-        """return a new Matrix object after summation"""
-        pass
+#ii.
+print (array_A + array_B)
 
-    def sub(self, m):
-        """return a new Matrix object after substraction"""
-        pass
+print('='*10,'A-B','='*10)
 
-    def mul(self, m):
-        """return a new Matrix object after multiplication"""
-        pass
+#iii.
+print (array_A - array_B)
 
-    def transpose(self):
-        """return a new Matrix object after transpose"""
-        pass
-    
-    def display(self):
-        """Display the content in the matrix"""
-        pass
+print('='*10,'A*B','='*10)
+
+#iv.
+print (array_A * array_B)
+
+print('='*5,'the travspose of A*B','='*5)
+
+#v.
+print((array_A * array_B).T)
